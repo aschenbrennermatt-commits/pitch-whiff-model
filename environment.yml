@@ -1,0 +1,20 @@
+name: whiff
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pandas
+  - pyarrow
+  - psycopg
+  - sqlalchemy
+  - jupyterlab
+  - ipykernel
+  - matplotlib
+  - seaborn
+  - scikit-learn
+  - lightgbm
+  - shap
+  - streamlit
+  - pip
+  - pip:
+      - pybaseball

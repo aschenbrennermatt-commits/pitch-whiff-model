@@ -1,0 +1,15 @@
+# Raw data: download it with scripts/01_download_statcast.py. Don't commit it.
+data/raw/*
+!data/raw/.gitkeep
+
+# Python and Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+.env
+
+# Saved models (can be rebuilt from the notebooks)
+models/
+
+# macOS
+.DS_Store
