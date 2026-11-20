@@ -13,7 +13,7 @@
 
 SELECT FLOOR(velo) AS velo_mph,
 	   COUNT(*) AS swings,
-	   ROUND(100.0 * AVG(whiff), 1) AS whiff_rate
+	   ROUND(100.0 * AVG(whiff), 1) AS whiff_pct
 FROM model_swings
 WHERE pitch_type = 'FF'
 GROUP BY velo_mph
