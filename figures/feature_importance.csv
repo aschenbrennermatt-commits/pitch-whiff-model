@@ -1,0 +1,22 @@
+,fastball,breaking,offspeed,category
+arm_angle,0.0434,0.0276,0.0774,pitch traits
+balls,0.0465,0.0267,0.0225,count and matchup
+extension,0.0158,0.0122,0.0156,pitch traits
+hb_diff,0.0222,0.0182,0.0192,difference from fastball
+hb_in,0.0845,0.0318,0.0395,pitch traits
+ivb_diff,0.0855,0.0345,0.036,difference from fastball
+ivb_in,0.0563,0.1228,0.0734,pitch traits
+location_horizontal,0.2815,0.4382,0.2006,location
+location_vertical,0.2913,0.8874,0.7004,location
+pitch_type,0.0578,0.0087,0.0047,pitch traits
+rel_height,0.0868,0.0295,0.0219,pitch traits
+rel_height_diff,0.0088,0.0123,0.0164,difference from fastball
+rel_side,0.019,0.0297,0.0192,pitch traits
+rel_side_diff,0.0182,0.0132,0.0233,difference from fastball
+same_hand,0.0523,0.0406,0.0942,count and matchup
+spin_axis,0.0157,0.0206,0.0322,pitch traits
+spin_rate,0.0271,0.0273,0.0267,pitch traits
+strikes,0.1386,0.3052,0.2551,count and matchup
+vaa,0.3709,0.0334,0.0376,pitch traits
+velo,0.0571,0.1302,0.0833,pitch traits
+velo_diff,0.0567,0.1267,0.1737,difference from fastball
