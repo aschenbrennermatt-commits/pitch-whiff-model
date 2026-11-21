@@ -1,0 +1,3 @@
+My ranking predctions from most to least impactive on whiff percentage is velocity, vertical break, spin rate, extension, and approach angle.
+
+My reasoning for this order is velocity shortens the overall amount of reaction time, vertical breaek is highly correlated with velocity but induced vertical break can vary at the same velocity depending on pitcher mechanics and finger tip pressure, then spin rate depending on pitcher and finger tip pressure, extension shortening the distance from release point to home plate, and approach angle changing the angle at which the batter watches the pitch leave the pitchers hand.
