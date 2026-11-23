@@ -11,11 +11,11 @@ When developing a pitcher, coaches have to choose what to train: velocity, comma
 
 ## Key results
 
-- The model beats a simple baseline - LightGBM cut log loss vs the pitch-type average by 12.7% (fastballs), 27.0% (breaking), 16.7% (off-speed); AUC 0.75–0.82 on the unseen 2025 season
-- Location matters a lot -	Location + count alone reached 73–95% of the full model's gain; location was the top driver for breaking and off-speed
-- Fastball shape matters most - For fastballs, pitch traits were 45% of importance, more than any other group
-- Approach angle, with a caution - VAA was the #1 fastball feature, but it correlates 0.78 with pitch height, so part of that is location
-- Your prediction - You predicted velocity > break > spin > extension > approach angle; the model matched positions 2–5, except approach angle came first
+- **The model beats a simple baseline.** LightGBM cut log loss vs the pitch-type average by 12.7% (fastballs), 27.0% (breaking) and 16.7% (off-speed), with AUC 0.75–0.82 on the unseen 2025 season.
+- **Location matters a lot.** Location + count alone reached 73–95% of the full model's gain; location was the top driver for breaking and off-speed pitches.
+- **Fastball shape matters most.** For fastballs, pitch traits were 45% of importance, more than any other group.
+- **Approach angle, with a caution.** VAA was the #1 fastball feature, but it correlates 0.78 with pitch height, so part of that is location.
+- **My prediction held up, except for one feature.** I predicted velocity > vertical break > spin > extension > approach angle. The model matched positions 2–5 in order, but ranked approach angle first.
 
 ## Dashboard
 
