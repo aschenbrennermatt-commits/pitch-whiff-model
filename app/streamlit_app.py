@@ -12,6 +12,7 @@ import sys
 from pathlib import Path
 from urllib.parse import quote_plus
 
+import altair as alt
 import joblib
 import pandas as pd
 import streamlit as st
@@ -203,8 +204,21 @@ rows = []
 for feature, step, change_label in CHANGES:
     new = predict(apply_change(these, feature, step), saved).mean()
     rows.append({"change": change_label, "whiff_points": 100 * (new - base)})
-best = pd.DataFrame(rows).sort_values("whiff_points", ascending=False).set_index("change")
-st.bar_chart(best, horizontal=True, y_label="", x_label="change in model whiff % (points)")
+best = pd.DataFrame(rows).sort_values("whiff_points", ascending=False)
+best["direction"] = best["whiff_points"].map(lambda v: "helps" if v > 0 else "hurts")
+chart = (
+    alt.Chart(best)
+    .mark_bar()
+    .encode(
+        x=alt.X("whiff_points:Q", title="change in model whiff % (points)"),
+        y=alt.Y("change:N", sort=None, title=None, axis=alt.Axis(labelLimit=250)),
+        color=alt.Color("direction:N", scale=alt.Scale(domain=["helps", "hurts"],
+                                                        range=["#4C72B0", "#C44E52"]), legend=None),
+        tooltip=["change", alt.Tooltip("whiff_points:Q", format="+.2f", title="points")],
+    )
+    .properties(height=320)
+)
+st.altair_chart(chart)
 st.caption(f"Each bar applies one change to every {PITCH_NAMES.get(pitch, pitch).lower()} "
            f"{pitcher_name} threw on a swing, keeping location and count as they were, "
            f"and re-runs the model (baseline {100 * base:.1f}%).")
