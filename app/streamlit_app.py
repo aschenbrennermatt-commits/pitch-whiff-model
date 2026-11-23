@@ -38,7 +38,7 @@ SELECT pitchers.pitcher_id,
        pitchers.pitcher_name,
        COUNT(*) AS swings
 FROM model_swings
-JOIN pitchers ON pitchers.pitchers_id = model_swings.pitcher
+JOIN pitchers ON pitchers.pitcher_id = model_swings.pitcher
 WHERE model_swings.game_year = :season
 GROUP BY pitchers.pitcher_id, pitchers.pitcher_name
 HAVING COUNT(*) >= :min_swings
